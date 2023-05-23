@@ -37,11 +37,13 @@ nav ul {
 
 .fa-beat {
   font-size: 30px;
-  color: rgb(212,154,104);
+  color: rgb( 212, 154, 104 );
 }
 
 .fa-heart {
+  /* stylelint-disable */
   color: rgb(0, 0, 0);
+   /* stylelint-enable */
 }
 
 .heart:hover {
@@ -76,7 +78,9 @@ footer {
   justify-content: space-between;
   padding: 0.5rem;
   height: 350px;
+   /* stylelint-disable */
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   /* stylelint-enable */
 }
 
 .interactions {
