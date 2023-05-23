@@ -51,3 +51,23 @@ footer {
   background: rgb(211, 207, 207);
   justify-content: center;
 }
+
+.cat-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1rem;
+  padding: 0.5rem 0.1rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.cat:hover {
+  cursor: pointer;
+}
+
+.cat img {
+  width: 270px;
+  height: 300px;
+  object-fit: cover;
+}
