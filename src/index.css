@@ -37,11 +37,19 @@ nav ul {
 
 .fa-beat {
   font-size: 30px;
-  color: #e00606;
+  color: rgb(212,154,104);
 }
 
 .fa-heart {
-  color: #f00;
+  color: rgb(0, 0, 0);
+}
+
+.heart:hover {
+  cursor: pointer;
+}
+
+.message:hover {
+  cursor: pointer;
 }
 
 footer {
@@ -62,12 +70,25 @@ footer {
   align-items: center;
 }
 
-.cat:hover {
-  cursor: pointer;
+.cat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+  height: 350px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.interactions {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .cat img {
   width: 270px;
   height: 300px;
   object-fit: cover;
+  cursor: pointer;
 }

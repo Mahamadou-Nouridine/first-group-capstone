@@ -12,6 +12,14 @@ const onPageLoad = async () => {
     show += `
     <div class='cat'>
       <img src=${url} alt='cat'>
+      <section class="interactions">
+        <div class='heart'>
+          Like <i class="fa-regular fa-heart"></i>
+        </div>
+        <div class='message'>
+          Comment <i class="fa-regular fa-message"></i>
+        </div>
+      </section>
     </div>
     `;
   });
