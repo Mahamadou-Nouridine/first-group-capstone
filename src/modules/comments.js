@@ -1,28 +1,29 @@
 /* eslint-disable no-unused-vars */
-import { baseUrl, endPoints } from "./constant.js";
-const commentsListEl = document.querySelector(".comments-list");
-const commenterName = document.querySelector("#commenter-name");
-const commentText = document.querySelector("#comment-text");
-const modal = document.querySelector(".modal");
-const errorBox = document.querySelector(".error-box");
+import { baseUrl, endPoints } from './constant.js';
+
+const commentsListEl = document.querySelector('.comments-list');
+const commenterName = document.querySelector('#commenter-name');
+const commentText = document.querySelector('#comment-text');
+const modal = document.querySelector('.modal');
+const errorBox = document.querySelector('.error-box');
 
 const showErrorBox = (message, status) => {
-  if (status) errorBox.style.setProperty("color", "green");
-  else errorBox.style.setProperty("color", "red");
+  if (status) errorBox.style.setProperty('color', 'green');
+  else errorBox.style.setProperty('color', 'red');
 
   errorBox.textContent = message;
   setTimeout(() => {
-    errorBox.textContent = "";
+    errorBox.textContent = '';
   }, 3000);
 };
 
 export const createComment = async (itemId, username, comment) => {
   try {
     const createdComment = await fetch(`${baseUrl}${endPoints.comments}`, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-type": "application/json",
+        Accept: 'application/json, text/plain, */*',
+        'Content-type': 'application/json',
       },
       body: JSON.stringify({
         item_id: itemId,
@@ -40,9 +41,9 @@ export const createComment = async (itemId, username, comment) => {
 export const getComments = async (itemId) => {
   try {
     const comments = await fetch(
-      `${baseUrl}${endPoints.comments}?item_id=${itemId}`
+      `${baseUrl}${endPoints.comments}?item_id=${itemId}`,
     );
-    if (comments.status != 200) {
+    if (comments.status !== 200) {
       return false;
     }
     // .then((res) => {
@@ -59,12 +60,12 @@ export const getComments = async (itemId) => {
 };
 
 export const displayComment = async (itemId) => {
-  commentsListEl.innerHTML = "";
+  commentsListEl.innerHTML = '';
   const comments = await getComments(itemId);
   if (comments) {
     comments.forEach((comment) => {
-      const commentEL = document.createElement("div");
-      commentEL.classList.add("comment");
+      const commentEL = document.createElement('div');
+      commentEL.classList.add('comment');
       commentEL.innerHTML = `
             <div class="person-icon">
                 <i class="fa-solid fa-circle-user"></i>
@@ -81,24 +82,22 @@ export const displayComment = async (itemId) => {
       commentsListEl.appendChild(commentEL);
     });
   } else {
-    commentsListEl.textContent = "No comment created";
+    commentsListEl.textContent = 'No comment created';
   }
 };
 
 export const submitNewComment = async () => {
-  const id = modal.id;
+  const { id } = modal;
   const newComment = await createComment(
     id,
     commenterName.value,
-    commentText.value
+    commentText.value,
   );
 
-  if (newComment) showErrorBox("Comment created Successfully", true);
-  else showErrorBox("An error occurs while creating the comment", false);
+  if (newComment) showErrorBox('Comment created Successfully', true);
+  else showErrorBox('An error occurs while creating the comment', false);
 
-  console.log(commenterName.value, commentText.value);
-
-  commenterName.value = "";
-  commentText.value = "";
-  newComment & displayComment(id);
+  commenterName.value = '';
+  commentText.value = '';
+  if (newComment) displayComment(id);
 };

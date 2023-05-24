@@ -143,7 +143,6 @@ footer {
   width: 100%;
   max-width: 400px;
   min-width: 250px;
-
 }
 
 .popup-image-container img {
@@ -231,7 +230,7 @@ form {
 
 .comments-list {
   max-height: 250px;
- width: 300px;
+  width: 300px;
   overflow-y: scroll;
 }
 
