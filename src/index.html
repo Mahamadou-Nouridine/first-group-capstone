@@ -39,12 +39,14 @@
 
                     <form>
                         <h2>Add Comment</h2>
+                        <small class="error-box"></small>
                         <div class="input-group">
-                            <input placeholder="Enters your name" type="text" id="commenter-name">
+                            <input required placeholder="Enters your name" type="text" id="commenter-name">
                         </div>
                         <div class="input-group">
-                            <textarea placeholder="Enter your comment" id="comment-text" cols="30" rows="10"></textarea>
+                            <textarea required placeholder="Enter your comment" id="comment-text" cols="30" rows="10"></textarea>
                         </div>
+                        <button class="add-comment">Add comment</button>
                     </form>
                 </div>
                 <div class="popup-comments">

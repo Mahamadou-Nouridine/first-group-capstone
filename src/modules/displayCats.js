@@ -7,18 +7,18 @@ export const fetchCats = async () => {
   if (catState.length) {
     return catState;
   }
-  const res = await fetch(
-    'https://api.thecatapi.com/v1/images/search?breed_ids=beng&limit=20&order=ASC',
-    {
-      headers: {
-        'x-api-key':
-            'live_bY7Sj61OTOApLZj0Eh5EnRPCEMGjIwAvltIF0RlSbqBFDTrZaljn4BX4IZm4abyR',
-      },
-    },
-  );
-  const data = await res.json();
+  // const res = await fetch(
+  //   'https://api.thecatapi.com/v1/images/search?breed_ids=beng&limit=20&order=ASC',
+  //   {
+  //     headers: {
+  //       'x-api-key':
+  //           'live_bY7Sj61OTOApLZj0Eh5EnRPCEMGjIwAvltIF0RlSbqBFDTrZaljn4BX4IZm4abyR',
+  //     },
+  //   },
+  // );
+  // const data = await res.json();
   // localStorage.setItem("cats", JSON.stringify(data));
-  // const data = JSON.parse(localStorage.getItem("cats"));
+  const data = JSON.parse(localStorage.getItem("cats"));
   catState = data;
   return data;
 };
