@@ -12,11 +12,15 @@
 </head>
 
 <body>
+
     <div class="modal">
         <div class="popup">
+            <div class="cross">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
             <div class="popup-image-description">
                 <div class="popup-image-container">
-                    <img src="https://cdn2.thecatapi.com/images/IFXsxmXLm.jpg" alt="cat-description">
+                    <img class="popup-image" src="https://cdn2.thecatapi.com/images/IFXsxmXLm.jpg" alt="cat-description">
                     <h3 class="popup-title">Cat 2 (Bengal)</h3>
                 </div>
                 <div class="popup-description">
@@ -36,10 +40,10 @@
                     <form>
                         <h2>Add Comment</h2>
                         <div class="input-group">
-                            <input placeholder="Enter your name" type="text" id="commenter-name">
+                            <input placeholder="Enters your name" type="text" id="commenter-name">
                         </div>
                         <div class="input-group">
-                            <textarea id="comment-text" cols="30" rows="10"></textarea>
+                            <textarea placeholder="Enter your comment" id="comment-text" cols="30" rows="10"></textarea>
                         </div>
                     </form>
                 </div>
@@ -84,6 +88,7 @@
             </div>
         </div>
     </div>
+
     <header>
         <div class="brand">
             <i class="fa fa-shield-cat fa-beat"></i>
