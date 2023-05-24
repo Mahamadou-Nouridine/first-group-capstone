@@ -1,7 +1,10 @@
 import './index.css';
-import { itemCounter, onPageLoad } from './modules/onPageLoad.js';
+import { displayCats } from './modules/displayCats.js';
+import { closeModal } from './modules/popup.js';
+
+const cross = document.querySelector('.cross i');
 
 window.addEventListener('DOMContentLoaded', () => {
-  onPageLoad();
-  itemCounter();
+  displayCats();
+  cross.addEventListener('click', closeModal);
 });
