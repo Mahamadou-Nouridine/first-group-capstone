@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/no-cycle
+/* eslint-disable import/no-cycle */
 import { fetchCats } from './displayCats.js';
 import { displayComment } from './comments.js';
 

@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { baseUrl, endPoints } from './constant.js';
 
 const commentsListEl = document.querySelector('.comments-list');
@@ -6,6 +5,7 @@ const commenterName = document.querySelector('#commenter-name');
 const commentText = document.querySelector('#comment-text');
 const modal = document.querySelector('.modal');
 const errorBox = document.querySelector('.error-box');
+const commentsCountEl = document.querySelector('.comments-count');
 
 const showErrorBox = (message, status) => {
   if (status) errorBox.style.setProperty('color', 'green');
@@ -16,6 +16,8 @@ const showErrorBox = (message, status) => {
     errorBox.textContent = '';
   }, 3000);
 };
+
+export const commentsCounter = (comments) => (comments ? comments.length : 0);
 
 export const createComment = async (itemId, username, comment) => {
   try {
@@ -32,7 +34,7 @@ export const createComment = async (itemId, username, comment) => {
       }),
     });
 
-    return createComment !== undefined;
+    return createdComment !== undefined;
   } catch (error) {
     return false;
   }
@@ -46,12 +48,6 @@ export const getComments = async (itemId) => {
     if (comments.status !== 200) {
       return false;
     }
-    // .then((res) => {
-    //     console.log('In success case');
-    //     return res.json();
-    // }).catch(error => {
-    //     console.log('In error case');
-    // });
     const data = comments.json();
     return data;
   } catch (error) {
@@ -63,6 +59,7 @@ export const displayComment = async (itemId) => {
   commentsListEl.innerHTML = '';
   const comments = await getComments(itemId);
   if (comments) {
+    commentsCountEl.textContent = `(${commentsCounter(comments)})`;
     comments.forEach((comment) => {
       const commentEL = document.createElement('div');
       commentEL.classList.add('comment');
@@ -82,6 +79,7 @@ export const displayComment = async (itemId) => {
       commentsListEl.appendChild(commentEL);
     });
   } else {
+    commentsCountEl.textContent = `(${commentsCounter(false)})`;
     commentsListEl.textContent = 'No comment created';
   }
 };

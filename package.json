@@ -26,6 +26,7 @@
   "homepage": "https://github.com/Mahamadou-Nouridine/first-group-capstone#readme",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.21.5",
+    "@types/jest": "^29.5.1",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.4",
     "eslint": "^7.32.0",

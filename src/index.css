@@ -43,7 +43,7 @@ nav ul {
 }
 
 .fa-heart {
-  color: rgb(0, 0, 0);
+  color: red;
 }
 
 .heart:hover {
