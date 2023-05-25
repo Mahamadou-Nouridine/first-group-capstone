@@ -19,8 +19,6 @@ export const fetchCats = async () => {
     },
   );
   const data = await res.json();
-  // localStorage.setItem("cats", JSON.stringify(data));
-  // const data = JSON.parse(localStorage.getItem('cats'));
   catState = data;
   return data;
 };
