@@ -1,4 +1,4 @@
-function itemCounter (data) {
+function itemCounter(data) {
   return data.length;
 }
 
