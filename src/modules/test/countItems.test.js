@@ -1,4 +1,4 @@
-import itemCounter from "../itemCounter"; 
+import itemCounter from '../itemCounter.js';
 
 describe('This test should return the correct number of items from itemCounter function', () => {
   test('should return the length of the data array', () => {
