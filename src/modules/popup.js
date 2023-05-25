@@ -1,5 +1,6 @@
-// eslint-disable-next-line import/no-cycle
+/* eslint-disable import/no-cycle */
 import { fetchCats } from './displayCats.js';
+import { displayComment } from './comments.js';
 
 const modal = document.querySelector('.modal');
 const popup = document.querySelector('.popup');
@@ -14,6 +15,7 @@ const updatePopupInfo = (catName, description, category, image) => {
 };
 
 const openModal = async (cat) => {
+  displayComment(cat.id);
   const catstate = await fetchCats();
   const image = cat.url;
   const category = cat.breeds[0].name;
@@ -21,6 +23,7 @@ const openModal = async (cat) => {
   const name = `cat ${catstate.indexOf(cat) + 1}`;
   updatePopupInfo(name, description, category, image);
   modal.classList.add('modal-open');
+  modal.id = cat.id;
   document.body.style.setProperty('overflow', 'hidden');
   setTimeout(() => {
     popup.classList.add('popup-open');
