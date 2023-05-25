@@ -1,4 +1,5 @@
 /* eslint-disable import/no-cycle */
+import { getLikes, postLike } from './likeData.js';
 import { setShowListener } from './popup.js';
 
 let catState = [];
@@ -34,9 +35,10 @@ const displayCats = async () => {
     show.innerHTML = `
       <img src=${url} alt='cat'>
       <section class="interactions">
-        <div class='heart'>
-          Like <i class="fa-regular fa-heart"></i>
-        </div>
+        <button id='${index}' class='heart' >
+          <span class='count' id='${index}'>0</span>
+          Likes <i class="fa-regular fa-heart"></i>
+        </button>
         <button id='${index}' class='message'>
           Comment <i class="fa-regular fa-message"></i>
         </button>
@@ -44,23 +46,25 @@ const displayCats = async () => {
     `;
     holder.appendChild(show);
   });
+  itemCounter(urls)
   setShowListener();
+
+  window.addEventListener('click', (e) => {
+    if(e.target.classList.contains('heart')){
+      const targetId = e.target.id;
+      postLike(targetId);
+      const likeHolder = e.target.firstElementChild;
+      let likeNum = Number(likeHolder.textContent);
+      likeNum += 1;
+      likeHolder.textContent = String(likeNum);
+    }
+  })
+  getLikes();
 };
 
-const itemCounter = async () => {
-  const res = await fetch(
-    'https://api.thecatapi.com/v1/images/search?breed_ids=beng&limit=20&order=ASC',
-    {
-      headers: {
-        'x-api-key':
-          'live_3LSh5c98OlFcR32CElsjBzHpY2E51GK0xqpsu3c0dmxVtEwQ7m9HCw6g5i7VPjBr',
-      },
-    },
-  );
-  const data = await res.json();
-  const urls = Object.values(data).map((catImage) => catImage.url);
+const itemCounter = (urls) => {
   const itemCount = document.querySelector('.item-count');
   itemCount.innerHTML = urls.length;
 };
 
-export { displayCats, itemCounter };
+export default displayCats;

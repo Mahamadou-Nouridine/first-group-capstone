@@ -46,6 +46,11 @@ nav ul {
   color: red;
 }
 
+.heart {
+  padding: 5px;
+  height: 30px;
+}
+
 .heart:hover {
   cursor: pointer;
 }
