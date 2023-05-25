@@ -1,6 +1,7 @@
 /* eslint-disable import/no-cycle */
 import { getLikes, postLike } from './likeData.js';
 import { setShowListener } from './popup.js';
+import itemCounter from './itemCounter.js';
 
 let catState = [];
 
@@ -22,11 +23,6 @@ export const fetchCats = async () => {
   // const data = JSON.parse(localStorage.getItem('cats'));
   catState = data;
   return data;
-};
-
-const itemCounter = (urls) => {
-  const itemCount = document.querySelector('.item-count');
-  itemCount.innerHTML = urls.length;
 };
 
 const displayCats = async () => {
@@ -51,8 +47,10 @@ const displayCats = async () => {
     `;
     holder.appendChild(show);
   });
-  itemCounter(urls);
   setShowListener();
+
+  const itemCount = document.querySelector('.item-count');
+  itemCount.textContent = itemCounter(urls);
 
   window.addEventListener('click', (e) => {
     if (e.target.classList.contains('heart')) {
