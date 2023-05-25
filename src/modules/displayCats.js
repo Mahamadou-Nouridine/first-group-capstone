@@ -24,6 +24,11 @@ export const fetchCats = async () => {
   return data;
 };
 
+const itemCounter = (urls) => {
+  const itemCount = document.querySelector('.item-count');
+  itemCount.innerHTML = urls.length;
+};
+
 const displayCats = async () => {
   const data = await fetchCats();
   localStorage.setItem('cats', JSON.stringify(data));
@@ -60,11 +65,6 @@ const displayCats = async () => {
     }
   });
   getLikes();
-};
-
-const itemCounter = (urls) => {
-  const itemCount = document.querySelector('.item-count');
-  itemCount.innerHTML = urls.length;
 };
 
 export default displayCats;

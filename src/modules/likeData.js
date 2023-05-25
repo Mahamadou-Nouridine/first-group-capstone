@@ -1,5 +1,5 @@
-import { baseUrl, endPoints } from './constant';
-import displayLikes from './displayLikes';
+import { baseUrl, endPoints } from './constant.js';
+import displayLikes from './displayLikes.js';
 
 const postLike = async (targetId) => {
   await fetch(`${baseUrl}${endPoints.likes}`, {
