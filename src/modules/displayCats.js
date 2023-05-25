@@ -46,11 +46,11 @@ const displayCats = async () => {
     `;
     holder.appendChild(show);
   });
-  itemCounter(urls)
+  itemCounter(urls);
   setShowListener();
 
   window.addEventListener('click', (e) => {
-    if(e.target.classList.contains('heart')){
+    if (e.target.classList.contains('heart')) {
       const targetId = e.target.id;
       postLike(targetId);
       const likeHolder = e.target.firstElementChild;
@@ -58,7 +58,7 @@ const displayCats = async () => {
       likeNum += 1;
       likeHolder.textContent = String(likeNum);
     }
-  })
+  });
   getLikes();
 };
 
