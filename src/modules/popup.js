@@ -8,7 +8,6 @@ const popupDescription = document.querySelector('.popup-description p');
 const popupImage = document.querySelector('.popup-image');
 const popupTitle = document.querySelector('.popup-title');
 
-
 const updatePopupInfo = (catName, description, category, image) => {
   popupTitle.textContent = `${catName} (${category})`;
   popupDescription.textContent = description;
@@ -53,4 +52,4 @@ export const setShowListener = async () => {
 
 modal.addEventListener('click', () => {
   closeModal();
-})
+});
