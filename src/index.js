@@ -13,4 +13,4 @@ window.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     submitNewComment();
   });
-});
+}); 
