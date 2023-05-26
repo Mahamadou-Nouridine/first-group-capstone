@@ -1,16 +1,17 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h3><b>1st GROUP CAPSTONE PROJECT</b></h3>
+  <h3><b>Cat Portal</b></h3>
 </div>
 
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 1st GROUP CAPSTONE PROJECT](#-1st-group-capstone-project)
+- [📖 Cat Portal](#about-project)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🎥 Video Explanation](#video-explanation) 
   - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
@@ -24,9 +25,9 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-# 📖 1st GROUP CAPSTONE PROJECT<a name="about-project"></a>
+# 📖 Cat Portal<a name="about-project"></a>
 
-TO DO LIST is an application that is used to manage tasks you can add todo or update todo also you can remove the todo you finished from it
+Cat Portal is a website of **Bengales** cat category collection that allow users to like and comment a cat
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -42,6 +43,9 @@ TO DO LIST is an application that is used to manage tasks you can add todo or up
 - [ ] **Comment on a cat**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🎥 Video Explanation <a name="video-explanation"></a>
+Clicke <a href="https://drive.google.com/file/d/1VS41Bbjx4CM_MqG_0ij5qFq-RCN4TL3B/view?usp=share_link">here</a> for the video explanation
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
