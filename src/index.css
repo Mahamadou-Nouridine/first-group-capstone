@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(211, 207, 207);
+  position: fixed;
+}
+
+.brand {
+  display: inherit;
+  align-items: center;
+  gap: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.fa-beat {
+  font-size: 30px;
+  color: rgb(212, 154, 104);
+}
+
+.fa-heart {
+  color: red;
+}
+
+.heart {
+  padding: 5px;
+  height: 30px;
+}
+
+.heart:hover {
+  cursor: pointer;
+}
+
+.message {
+  padding: 5px;
+  height: 30px;
+}
+
+.message:hover {
+  cursor: pointer;
+}
+
+footer {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background: rgb(211, 207, 207);
+  justify-content: center;
+}
+
+.cat-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.cat {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem;
+  height: auto;
+  max-height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.interactions {
+  margin: 5px 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cat img {
+  width: 270px;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.popup {
+  overflow-y: scroll;
+  max-width: 700px;
+  width: 100%;
+  background-color: white;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 10px;
+  max-height: 700px;
+  transform: scale(0);
+  transition: all ease-in-out 0.4s;
+}
+
+.popup-open {
+  transition: all ease-in-out 0.4s;
+  transform: scale(1);
+}
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-open {
+  display: flex;
+}
+
+.popup-image-container {
+  width: 100%;
+  max-width: 400px;
+  min-width: 250px;
+}
+
+.popup-image-container img {
+  width: 100%;
+  box-shadow: 1px 1px 5px black;
+  max-height: 400px;
+}
+
+.divider {
+  border: 1px solid grey;
+  width: 50%;
+  margin: 20px 0;
+}
+
+.popup-title {
+  width: auto;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.popup-comments h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.popup-comments {
+  margin: 10px 0;
+}
+
+.comment {
+  display: flex;
+  align-items: start;
+  margin-bottom: 10px;
+  background-color: white;
+  box-shadow: 1px 1px 2px black;
+  padding: 10px;
+  width: 100%;
+}
+
+.commenter-name {
+  margin-bottom: 10px;
+}
+
+.commenter-name span {
+  font-size: 10px;
+}
+
+.person-icon {
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.popup-image-description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.popup-comments-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group input {
+  width: 100%;
+}
+
+#commenter-name {
+  height: 50px;
+  padding: 10px;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+#comment-text {
+  padding: 10px;
+  font-size: 17px;
+}
+
+form {
+  max-width: 300px;
+  margin: auto;
+}
+
+.comments-list {
+  max-height: 250px;
+  width: 300px;
+  overflow-y: scroll;
+}
+
+.cross {
+  align-self: flex-end;
+}
+
+.cross i {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .popup-image-description {
+    flex-direction: row;
+  }
+
+  .popup-comments-form {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  .cat-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .cat-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
