@@ -127,6 +127,7 @@ footer {
 }
 
 .modal {
+  backdrop-filter: blur(8px);
   display: none;
   justify-content: center;
   align-items: center;
