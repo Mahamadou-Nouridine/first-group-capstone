@@ -1,17 +1,18 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h3><b>1st GROUP CAPSTONE PROJECT</b></h3>
+  <h3><b>Cats Portal</b></h3>
 </div>
 
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 1st GROUP CAPSTONE PROJECT](#-1st-group-capstone-project)
+- [📖 Cats Portal](#about-project)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
+  - [🎥 Video Explanation](#video-explanation)  
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -24,7 +25,7 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-# 📖 1st GROUP CAPSTONE PROJECT<a name="about-project"></a>
+# 📖 Cats Portal<a name="about-project"></a>
 
 TO DO LIST is an application that is used to manage tasks you can add todo or update todo also you can remove the todo you finished from it
 
@@ -42,6 +43,9 @@ TO DO LIST is an application that is used to manage tasks you can add todo or up
 - [ ] **Comment on a cat**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🎥 Video Explanation <a name="video-explanation"></a>
+Click <a href="https://drive.google.com/file/d/1VS41Bbjx4CM_MqG_0ij5qFq-RCN4TL3B/view?usp=sharing">here</a> for the video explanation
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
