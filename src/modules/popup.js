@@ -49,7 +49,3 @@ export const setShowListener = async () => {
     });
   });
 };
-
-modal.addEventListener('click', () => {
-  closeModal();
-});
