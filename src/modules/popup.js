@@ -12,7 +12,7 @@ const updatePopupInfo = (catName, description, category, image) => {
   popupTitle.textContent = `${catName} (${category})`;
   popupDescription.textContent = description;
   popupImage.src = image;
-};
+}; 
 
 const openModal = async (cat) => {
   displayComment(cat.id);
